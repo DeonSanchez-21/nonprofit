@@ -32,10 +32,10 @@ header {
     background-color: rgb(65,65,65);
     position: absolute;
     right: 10%;
-    height: 5vh;
-    max-width: 60vw;
-    top: 0.225rem;
-    padding: 0 1rem;
+    height: auto;
+    border-radius: 0 0 12px 12px;
+    max-width: 720px;
+    top: 0;
     margin-left: 1rem;
 }
 .top-col{
@@ -46,14 +46,16 @@ header {
 }
 .top-col > *{
     cursor: pointer;
+    font-size: 0.9rem;
 }
 .top-col i {
     margin: 0.5rem;
 }
 .top-col p {
     font-weight: lighter;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 .login {
     text-decoration: none;
@@ -76,7 +78,7 @@ header {
     align-items: center;
     width: 100%;
     display: flex;
-    height: 25vh;
+    height: 25%;
     background-color: white;
     justify-content: center;
 }
@@ -140,21 +142,23 @@ header {
     background-color: rgb(41, 40, 40);
     position: sticky;
     top: 0px;
-    height: 9vh;
+    z-index: 999;
+    height: auto;
 }
 .list-items{
     display: flex;
     width: 80%;
     justify-content: space-around;
+    align-items: center;
     margin: 0 auto;
     padding: 0;
     
 }
 .list-items li {
     list-style-type: none;
+    padding: 1rem;
     width: 20%;
     padding: auto;
-    margin-top: 1rem;
     text-align: center;
 }
 
@@ -177,30 +181,26 @@ header {
 
 }
 
-.menu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 0 0 1rem 0;
+.team-nav, .programs-nav{
+    position: relative;
 }
-.menu li{
-    width: 100%;
-}
+
 .pop-up{
     transition-property: all;
-    transition-duration: 0.1s;
+    transition-duration: 0.3s;
     display: none;
-    margin: 1.15rem auto auto auto;
-    padding: 0.5rem;
-    width: 65%;
+    position: absolute;
+    top: 3.2rem;
+    width: 80%;
     height: auto;
     background-color: rgb(65,65,65);
 }
 
+.pop-up div{
+    padding: 1rem;
+}
 
-.pop-up ul li a{
+.pop-up div a{
     font-size: 0.8rem;
 }
 #check{
@@ -228,7 +228,7 @@ header {
 }
 .donation{
     display: flex;
-    
+    position: relative;
     align-items: center;
     justify-content: center;
 }
@@ -257,7 +257,7 @@ header {
 .payment-type{
     display: flex;
     position: absolute;
-    top: 17vh;
+    top: 3rem;
     padding: 0;
 }
 .payment-type li{
@@ -276,11 +276,10 @@ header {
 .head-bar{
     width: 90%;
     background-color: rgb(8,158,98);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 12.5vh;
+    text-align: center;
     margin: auto;
+    padding: 0.5rem;
+    height: auto;
  }
 .head-bar p {
     color: white;
@@ -291,8 +290,24 @@ header {
     text-transform: uppercase;
 }
 .top-con{
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+.cell{
+    width: 33%;
+    background-color: black;
+    height: 17rem;
+    margin: 0 2px;
+    overflow: hidden;
+}
+.flickity-page-dots {
+    display: none;
+  }
+.cell img{
     width: 100%;
-    height: 15rem;
+    object-fit: cover;
+    height: 350px;
 }
 .para-con{
     margin: 4rem auto;
@@ -313,12 +328,12 @@ header {
 }
 .mid-con{
     width: 100%;
-    height: 130rem;
+    min-height: 130rem;
 }
 .footer{
     background-color: rgb(240,240,240);
     width: 100%;
-    min-height: 64vh;
+    height: auto;
     border: 1.4rem rgb(65,65,65);
     border-style: solid hidden hidden hidden;
     font-family: poppins;
@@ -472,6 +487,12 @@ header {
     transform: translateY(5rem);
 }
 
+@media all and (max-width: 1000px) {
+    .top-pic{
+        visibility: hidden;
+    }
+}
+
 @media all and (max-width: 900px) {
 header{
     width: 100%;
@@ -480,8 +501,162 @@ header{
     .top-bar{
         margin-left: 2.5rem;
     }
+
+    .follow-us{
+        display: none;
+    }
+    
+    .header-col{
+        width: 33%;
+    }
+
+    .header-col p {
+        font-size: 1.05rem;
+    }
+
+    .slogan{
+        margin: 1rem;
+    }
+
+    .cell{
+        width: 50%;
+    }
+
+    .list-items{
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 770px) {
+    .top-bar{
+        max-width: 75vw;
+    }
+    .list-items{
+        width: 100%;
+    }
+    .bottom-inner-c{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fill, 1fr);
+        
+    }
+}
+
+@media all and (max-width: 690px) {
+    .top-bar{
+        
+        left: 0;
+        width: 6rem;
+        padding: 0;
+    }
+    .top-col{
+        padding: 0;
+    }
+    
+    .gg{
+        display: none;
+    }
+
+    .cell{
+        width: 100%;
+    }
+
+    #burger{
+        visibility: visible;
+        z-index: 999;
+    }
+   
+    .header-col{
+        width: 50%;
+    }
+
+    .social{
+        display: none;
+    }
+    header{
+        border-bottom: 1.5rem solid rgb(41,40,40);
+    }
+   
+    .payment-type{
+        display: none;
+    }
+    .nav-bar{
+        left: -100%;
+        position: fixed;
+        transition: all .5s;
+        visibility: visible;
+        width: 100%;
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(240,241,248);
+    }
+
+    .list-items{
+        flex-direction: column;
+        align-items: center;
+    }
+    .list-items li{
+        margin: 2rem;
+        
+    }
+    .list-items li a{
+        color: black;
+    }
+    .list-items li a:hover{
+        color: rgb(28,166,111);
+    }
+    
+    .list-items li:hover > .pop-up{
+        height: auto;
+        padding: 0.5rem;
+        visibility: visible;
+        display: block;
+        position: relative;
+    }
     .pop-up{
-        padding:1rem;
+        visibility: hidden;
+        background-color: rgb(240,241,248);
+    }
+    #check:checked ~ .nav-bar {
+        left: 0;
+    }
+    .row{
+        flex-direction:column;
+    }
+    .footer-col{
+        width: 75%;
+    }
+    .footer-col h4{
+        margin: 2rem 0;
+    }
+    .sub-form{
+        margin-bottom: 2rem;
+    }
+    #bottom-social{
+        visibility: visible;
+    }
+    .social-icons{
+        width: 4rem;
+    }
+    .social-icons a i{
+        font-size: 3rem;
+    }
+}
+
+@media all and (max-width: 550px){
+    .about-bar p{
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
+    }
+}@media all and (max-width: 900px) {
+header{
+    width: 100%;
+    height: 9rem;
+}
+    .top-bar{
+        margin-left: 2.5rem;
     }
 
     .follow-us{
@@ -560,7 +735,20 @@ header{
         background-color: rgb(240,241,248);
     }
 
+    .board-members{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .profile-pic{
+        width: 65%;
+        margin: 0.5rem;
+    }
+    .p-info{
+        width: 80%;
+        margin: 0.5rem;
+    }
 
     .list-items{
         flex-direction: column;
@@ -578,18 +766,14 @@ header{
     }
     
     .list-items li:hover > .pop-up{
-        margin: 1.15rem auto auto auto;
         height: auto;
         padding: 0.5rem;
         visibility: visible;
         display: block;
+        position: relative;
     }
     .pop-up{
         visibility: hidden;
-        margin: 0;
-        padding: 0;
-        width: 65%;
-        height: 0;
         background-color: rgb(240,241,248);
     }
     #check:checked ~ .nav-bar {
@@ -615,5 +799,13 @@ header{
     }
     .social-icons a i{
         font-size: 3rem;
+    }
+}
+
+@media all and (max-width: 550px){
+    .about-bar p{
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
     }
 }

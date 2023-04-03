@@ -32,10 +32,10 @@ header {
     background-color: rgb(65,65,65);
     position: absolute;
     right: 10%;
-    height: 5vh;
-    max-width: 60vw;
-    top: 0.225rem;
-    padding: 0 1rem;
+    height: auto;
+    border-radius: 0 0 12px 12px;
+    max-width: 720px;
+    top: 0;
     margin-left: 1rem;
 }
 .top-col{
@@ -46,14 +46,16 @@ header {
 }
 .top-col > *{
     cursor: pointer;
+    font-size: 0.9rem;
 }
 .top-col i {
     margin: 0.5rem;
 }
 .top-col p {
     font-weight: lighter;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 .login {
     text-decoration: none;
@@ -76,7 +78,7 @@ header {
     align-items: center;
     width: 100%;
     display: flex;
-    height: 25vh;
+    height: 25%;
     background-color: white;
     justify-content: center;
 }
@@ -140,21 +142,23 @@ header {
     background-color: rgb(41, 40, 40);
     position: sticky;
     top: 0px;
-    height: 9vh;
+    z-index: 999;
+    height: auto;
 }
 .list-items{
     display: flex;
     width: 80%;
     justify-content: space-around;
+    align-items: center;
     margin: 0 auto;
     padding: 0;
     
 }
 .list-items li {
     list-style-type: none;
+    padding: 1rem;
     width: 20%;
     padding: auto;
-    margin-top: 1rem;
     text-align: center;
 }
 
@@ -177,30 +181,26 @@ header {
 
 }
 
-.menu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 0 0 1rem 0;
+.team-nav, .programs-nav{
+    position: relative;
 }
-.menu li{
-    width: 100%;
-}
+
 .pop-up{
     transition-property: all;
-    transition-duration: 0.1s;
+    transition-duration: 0.3s;
     display: none;
-    margin: 1.15rem auto auto auto;
-    padding: 0.5rem;
-    width: 65%;
+    position: absolute;
+    top: 3.2rem;
+    width: 80%;
     height: auto;
     background-color: rgb(65,65,65);
 }
 
+.pop-up div{
+    padding: 1rem;
+}
 
-.pop-up ul li a{
+.pop-up div a{
     font-size: 0.8rem;
 }
 #check{
@@ -228,7 +228,7 @@ header {
 }
 .donation{
     display: flex;
-    
+    position: relative;
     align-items: center;
     justify-content: center;
 }
@@ -257,7 +257,7 @@ header {
 .payment-type{
     display: flex;
     position: absolute;
-    top: 17vh;
+    top: 3rem;
     padding: 0;
 }
 .payment-type li{
@@ -274,7 +274,7 @@ header {
 }
 .board-page{
   
-    height: 90vh;
+    height: auto;
     width: 100%;
     flex-direction: column;
     justify-content: top;
@@ -285,10 +285,8 @@ header {
 .head-bar{
     width: 90%;
     background-color: rgb(8,158,98);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 12.5vh;
+    text-align: center;
+    height: auto;
  }
 .head-bar p {
     color: white;
@@ -301,15 +299,20 @@ header {
 
 .top-con{
     width:100%;
-    height: 50vh;
+    height: auto;
 }
 .top-pic{
     background-color: blanchedalmond;
-    width: 35vw;
+    width: 35%;
     background-size: cover;
     height: 45vh;
     margin: 0 1rem;
     background-image: url(images/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg);
+}
+.top-pic img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 .top-impact-s{
     width: 70%;
@@ -338,13 +341,14 @@ header {
 }
 .bottom-con{
     width: 75%;
-    height: 175vh;
+    height: auto;
     align-items: center;
     margin: auto;
+    margin-bottom: 5rem;
 }
 .bottom-h{
     width: 100%;
-    height: 15vh;
+    height: auto;
     text-align: center;
     text-transform: capitalize;
 
@@ -356,8 +360,8 @@ header {
     
 }
 .percent-container{
-    
-    height: 18rem;
+    color: #1ca66f;
+    height: auto;
     display: flex;
     place-items: center;
 }
@@ -366,7 +370,7 @@ header {
   width: 14.75rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background-color: green; 
+  background-color: #aac7ee; 
   margin: auto;
   display: flex;
   align-items: center;
@@ -404,8 +408,11 @@ header {
 }
 .rg-bar-c{
     width: 100%;
-    height: 45vh;
-    margin-bottom: 4rem;
+    height: auto;
+    padding: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f0f0f0;
 }
 .rg-bar{
     width: 80%;
@@ -413,41 +420,44 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-   
     height: 100%;
 }
 .inner-rg{
     width: 50%;
     height: 100%;
-    
 }
 .rg-head{
     width: 100%;
     height: 20%;
     text-align: center;
 }
+.rg-head h3{
+    text-transform: uppercase;
+}
 .rg-box{
     width: 100%;
     height: 80%;
     display: flex;
+    font-size: 1.7rem;
+    color: #1ca66f;
 }
 .inner-rg-box{
     width: 50%;
     height: 100%;
-    
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .center-rg-box{
+    background-color: white;                     
     width: 11rem;
     height: 10rem;
-    border: 1px solid green;
 }
 .rg-inner-content-top{
     width: 100%;
     height: 80%;
     display: flex;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -455,21 +465,68 @@ header {
 .rg-inner-content-bottom{
     width: 100%;
     height: 20%;
-    border: 1px solid blue;
+    border: 1px solid #97acc7;
+    border-style: solid none solid none;
+    background-color: #0a2344;
 }
+
+.progress_1{
+    width: 67%;
+    margin-right: auto;
+    background-color: 
+    #aac7ee;
+    height: 100%;
+}
+.progress_2{
+    width: 33%;
+    margin-right: auto;
+    background-color: 
+    #aac7ee;
+    height: 100%;
+}
+.progress_3{
+    width: 58%;
+    margin-right: auto;
+    background-color: 
+    #aac7ee;
+    height: 100%;
+}
+.progress_4{
+    width: 42%;
+    margin-right: auto;
+    background-color: 
+    #aac7ee;
+    height: 100%;
+}
+
+.svg_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.svg_div i{
+    margin-right: 0.5rem;
+    font-size: 2rem;
+}
+.svg_div p{
+    font-size: 1rem;
+}
+
 .rg-percent{
     margin: 0;
 }
 .sws{
     width: 100%;
-    height: 170vh;
+    height: auto;
     
 }
 .sws-con{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 80%;
-    height: 140vh;
+    height: auto;
+    padding-bottom: 1rem;
     margin: auto;
     grid-column-gap: 0.5rem;
 }
@@ -490,7 +547,7 @@ header {
 .footer{
     background-color: rgb(240,240,240);
     width: 100%;
-    min-height: 64vh;
+    height: auto;
     border: 1.4rem rgb(65,65,65);
     border-style: solid hidden hidden hidden;
     font-family: poppins;
@@ -644,6 +701,43 @@ header {
     transform: translateY(5rem);
 }
 
+
+@media all and (max-width: 1000px) {
+    .top-pic{
+        display: none;
+    }
+    .top-impact-s{
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+    
+    .bottom-inner-c{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+}
+
+@media all and (max-width: 550px){
+    .about-bar p{
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
+    }
+    .inner-top-c{
+        margin: 2rem;
+        display: flex;
+    }
+    .rg-box{
+        flex-direction: column;
+        align-items: center;
+    }
+    .inner-rg-box{
+        margin: 0.5rem;
+    }
+}
 @media all and (max-width: 900px) {
 header{
     width: 100%;
@@ -652,8 +746,13 @@ header{
     .top-bar{
         margin-left: 2.5rem;
     }
-    .pop-up{
-        padding:1rem;
+
+    .rg-bar{
+        flex-direction: column;
+    }
+
+    .inner-rg{
+        width: 80%;
     }
 
     .follow-us{
@@ -683,6 +782,12 @@ header{
     }
     .list-items{
         width: 100%;
+    }
+    .bottom-inner-c{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+        
     }
 }
 
@@ -732,7 +837,20 @@ header{
         background-color: rgb(240,241,248);
     }
 
+    .board-members{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .profile-pic{
+        width: 65%;
+        margin: 0.5rem;
+    }
+    .p-info{
+        width: 80%;
+        margin: 0.5rem;
+    }
 
     .list-items{
         flex-direction: column;
@@ -750,18 +868,14 @@ header{
     }
     
     .list-items li:hover > .pop-up{
-        margin: 1.15rem auto auto auto;
         height: auto;
         padding: 0.5rem;
         visibility: visible;
         display: block;
+        position: relative;
     }
     .pop-up{
         visibility: hidden;
-        margin: 0;
-        padding: 0;
-        width: 65%;
-        height: 0;
         background-color: rgb(240,241,248);
     }
     #check:checked ~ .nav-bar {
@@ -787,5 +901,13 @@ header{
     }
     .social-icons a i{
         font-size: 3rem;
+    }
+}
+
+@media all and (max-width: 550px){
+    .about-bar p{
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
     }
 }

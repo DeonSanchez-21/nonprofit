@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
     <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://kit.fontawesome.com/460480b505.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -73,7 +76,7 @@
         <nav class="nav-bar">
             <ul class="list-items">
                 <li>
-                    <a href="#"><span id="home-pg">Home</span> </a>
+                    <a href="/index.html">Home</a>
                 </li>
                 <li>
                     <a href="../about/about.html">About</a>
@@ -81,22 +84,18 @@
                 <li class="team-nav">
                     <a href="../team/leadership.html" >Team</a>
                     <div class="pop-up team-pop">
-                        <ul class="team-menu menu">
-                            <li>
-                                <a href="../team/leadership.html">Board Members</a>
-                            </li>
-                            <li>
-                                <a href="../team/staff.html">Staff</a>
-                            </li>
-                        </ul>
+                         <div>
+                            <a href="../team/team.html">Board Members</a>
+                         </div>
+                        <div>
+                            <a href="../team/staff.html">Staff</a>
+                        </div>
                     </div>
                 </li>
-                <li><a href="../programs/design.html" class="programs-nav">Programs</a>
-                    <div class="pop-up pro-pop">
-                        <ul class="program-menu menu">
-                            <li><a href="../programs/programs.html">Impact</a></li>
-                            <li><a href="../programs/diverse.html">Commitment to diversity</a></li>
-                        </ul>
+                <li class="programs-nav"><a href="../programs/design.html" ><span id="home-pg">Programs</span></a>
+                    <div class="pop-up pro-pop"> 
+                        <div><a href="../programs/programs.html">Impact</a></div>
+                        <div><a href="../programs/diverse.html">Commitment to diversity</a></div>
                     </div>
                 </li>
                 <li><a href="../donations/donations.html">Donations</a></li>
@@ -104,12 +103,17 @@
         </nav>
         <div class="head-bar">
             <p>
-                
-PROGRAM DESIGN AND MODEL
+                PROGRAM DESIGN AND MODEL
             </p>
         </div>
         <div class="top-con">
-
+            <div class="main-carousel">
+                <div class="cell"><img src="./images/cdc-gsRi9cWCIB0-unsplash.jpg" alt=""></div>
+                <div class="cell"><img src="./images/cdc-GDokEYnOfnE-unsplash (1).jpg" alt=""></div>
+                <div class="cell"><img src="./images/spikeball-yKsBMhgNpRs-unsplash.jpg" alt=""></div>
+                <div class="cell"><img src="./images/joel-muniz-XHT01BY-cGo-unsplash (1).jpg" alt=""></div>
+                <div class="cell"><img src="./images/kenny-eliason-zFSo6bnZJTw-unsplash.jpg" alt=""></div>
+            </div>
         </div>
         <div class="mid-con">
             <div class="para-con">
@@ -235,7 +239,19 @@ PROGRAM DESIGN AND MODEL
         </div>
     </section>
     <script src="../index-page/index.js"></script>
-
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script type="text/javascript">
+       var elem = document.querySelector('.main-carousel');
+var flkty = new Flickity( elem, {
+ 
+  cellAlign: 'left',
+  contain: true,
+  freeScroll: true
+});
+var flkty = new Flickity( '.main-carousel', {
+ 
+});
+    </script>
 
 </body>
 </html>

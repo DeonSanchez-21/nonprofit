@@ -32,10 +32,10 @@ header {
     background-color: rgb(65,65,65);
     position: absolute;
     right: 10%;
-    height: 5vh;
-    max-width: 60vw;
-    top: 0.225rem;
-    padding: 0 1rem;
+    height: auto;
+    border-radius: 0 0 12px 12px;
+    max-width: 720px;
+    top: 0;
     margin-left: 1rem;
 }
 .top-col{
@@ -46,14 +46,16 @@ header {
 }
 .top-col > *{
     cursor: pointer;
+    font-size: 0.9rem;
 }
 .top-col i {
     margin: 0.5rem;
 }
 .top-col p {
     font-weight: lighter;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 .login {
     text-decoration: none;
@@ -76,7 +78,7 @@ header {
     align-items: center;
     width: 100%;
     display: flex;
-    height: 25vh;
+    height: 25%;
     background-color: white;
     justify-content: center;
 }
@@ -140,21 +142,22 @@ header {
     background-color: rgb(41, 40, 40);
     position: sticky;
     top: 0px;
-    height: 9vh;
+    height: auto;
 }
 .list-items{
     display: flex;
     width: 80%;
     justify-content: space-around;
+    align-items: center;
     margin: 0 auto;
     padding: 0;
     
 }
 .list-items li {
     list-style-type: none;
+    padding: 1rem;
     width: 20%;
     padding: auto;
-    margin-top: 1rem;
     text-align: center;
 }
 
@@ -177,30 +180,26 @@ header {
 
 }
 
-.menu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 0 0 1rem 0;
+.team-nav, .programs-nav{
+    position: relative;
 }
-.menu li{
-    width: 100%;
-}
+
 .pop-up{
     transition-property: all;
-    transition-duration: 0.1s;
+    transition-duration: 0.3s;
     display: none;
-    margin: 1.15rem auto auto auto;
-    padding: 0.5rem;
-    width: 65%;
+    position: absolute;
+    top: 3.2rem;
+    width: 80%;
     height: auto;
     background-color: rgb(65,65,65);
 }
 
+.pop-up div{
+    padding: 1rem;
+}
 
-.pop-up ul li a{
+.pop-up div a{
     font-size: 0.8rem;
 }
 #check{
@@ -228,7 +227,7 @@ header {
 }
 .donation{
     display: flex;
-    
+    position: relative;
     align-items: center;
     justify-content: center;
 }
@@ -257,7 +256,7 @@ header {
 .payment-type{
     display: flex;
     position: absolute;
-    top: 17vh;
+    top: 3rem;
     padding: 0;
 }
 .payment-type li{
@@ -268,6 +267,7 @@ header {
     font-size: 1.225rem;
     color:rgb(65,65,65);
 }
+
 
 .main{
     width: 100%;
@@ -380,10 +380,6 @@ header {
     grid-template-columns: repeat(2, 50%);
     border-bottom: 1rem solid white;
 }
-.link{
-    text-decoration: none;
-    color: whitesmoke;
-}
 .c {
     display: flex;
     width:100%;
@@ -418,9 +414,13 @@ header {
 .p1{
     padding: 2rem;
 }
+.link{
+    text-decoration: none;
+    color: whitesmoke;
+}
 .button{
     width: 8.5rem;
-    height: 3rem;
+    height: 1.5rem;
     background-color: rgb(237,109,70);
     border: 1px solid black;
     color: white;
@@ -430,7 +430,7 @@ header {
 .button:hover{
     border: 1px solid rgb(95, 122, 212);
     background-color: rgb(95, 122, 212);
-    
+    cursor: pointer;
 }
 .testi-wrap{
     background-image: url(../images/group\ pic.webp);
@@ -593,10 +593,10 @@ header {
 .footer-col{
     width: 25%;
     display: flex;
+    height: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
 }
 
 .contact{
@@ -748,9 +748,6 @@ header{
     .top-bar{
         margin-left: 2.5rem;
     }
-    .pop-up{
-        padding:1rem;
-    }
 
     .follow-us{
         display: none;
@@ -829,14 +826,11 @@ header{
         transition: all .5s;
         visibility: visible;
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         flex-direction: column;
         align-items: center;
         background-color: rgb(240,241,248);
     }
-
-
-
     .list-items{
         flex-direction: column;
         align-items: center;
@@ -853,18 +847,14 @@ header{
     }
     
     .list-items li:hover > .pop-up{
-        margin: 1.15rem auto auto auto;
         height: auto;
         padding: 0.5rem;
         visibility: visible;
-        display: block;
+        position: relative;
+        transition: all 1s;
     }
     .pop-up{
         visibility: hidden;
-        margin: 0;
-        padding: 0;
-        width: 65%;
-        height: 0;
         background-color: rgb(240,241,248);
     }
     #check:checked ~ .nav-bar {
